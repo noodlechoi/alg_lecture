@@ -24,9 +24,9 @@ def downHeap(arr, root, size):
     # 중간고사 몇부터 시작인지, 0부터 시작으로 +1
     child = root * 2 + 1
     
-    # if 30 < size
+    # if 30 >= size
     # pyramid of doom vs early return => 너무 많은 들여쓰기
-    if child < size: return # if lc not exists
+    if child >= size: return # if lc not exists
 
     right_c_idx = child + 1
     if right_c_idx < size: # if rc exists
@@ -43,3 +43,10 @@ l_arr = len(array)
 # 배열의 절반부터 0까지
 for i in range(l_arr // 2 - 1, 0 - 1, -1):
     downHeap(array, i, l_arr)
+    print(array)
+
+for size in range(l_arr -1, 0, -1):
+    array[0], array[size] = array[size], array[0]
+    downHeap(array, 0, size)
+
+print(array)
