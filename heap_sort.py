@@ -29,8 +29,7 @@ def downHeap(arr, root, size):
     if child >= size: return # if lc not exists
 
     right_c_idx = child + 1
-    if right_c_idx < size: # if rc exists
-        if arr[child] < arr[right_c_idx]:
+    if right_c_idx < size and arr[child] < arr[right_c_idx]: # if rc exists and rc is bigger
             child = right_c_idx
 
     if arr[root] >= arr[child]: return
