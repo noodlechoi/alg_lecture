@@ -33,7 +33,11 @@ def downHeap(arr, root, size):
         if arr[child] < arr[right_c_idx]:
             child = right_c_idx
 
-    
+    if arr[root] >= arr[child]: return
+
+    arr[root], arr[child] = arr[child], arr[root]
+    # 더 내려갈 수 있는지
+    downHeap(arr. child, size)
 
 l_arr = len(array)
 # 배열의 절반부터 0까지
