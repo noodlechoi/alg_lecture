@@ -37,7 +37,7 @@ def downHeap(arr, root, size):
 
     arr[root], arr[child] = arr[child], arr[root]
     # 더 내려갈 수 있는지
-    downHeap(arr. child, size)
+    downHeap(arr, child, size)
 
 l_arr = len(array)
 # 배열의 절반부터 0까지
