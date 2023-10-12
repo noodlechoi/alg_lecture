@@ -22,17 +22,18 @@ print(array)
 # 내가 자식보다 작으면 내려감, 더 내려갈 수 있는지 확인
 def downHeap(arr, root, size):
     # 중간고사 몇부터 시작인지, 0부터 시작으로 +1
-    left_c_idx = root * 2 + 1
+    child = root * 2 + 1
     
     # if 30 < size
     # pyramid of doom vs early return => 너무 많은 들여쓰기
-    if left_c_idx < size: return # if lc not exists
+    if child < size: return # if lc not exists
 
-    right_c_idx = left_c_idx + 1
+    right_c_idx = child + 1
     if right_c_idx < size: # if rc exists
-        if arr[left_c_idx] < arr[right_c_idx]:
-            left_c_idx = right_c_idx
+        if arr[child] < arr[right_c_idx]:
+            child = right_c_idx
 
+    
 
 l_arr = len(array)
 # 배열의 절반부터 0까지
